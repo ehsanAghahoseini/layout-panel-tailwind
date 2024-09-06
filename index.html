@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+    <title>WebEhsan - Layout Admin Panel</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class=" bg-gray-100">
+
+    <section class="w-full flex items-center justify-end">
+        <div id="sidebar"
+            class="w-[250px] top-0 bottom-0 bg-white shadow py-6 px-4 fixed z-[5] right-[-300px]  lg:right-0 transition-all duration-500 flex flex-col justify-between ">
+            <div class="">
+                <button id="arrow"
+                    class="absolute rotate-180 w-[23px] h-[23px] rounded-full bg-red-600 left-[-12px] top-[33px] lg:flex hidden items-center justify-center"
+                    onclick="handelSideBar()">
+                    <svg class="w-[13px] h-[13px]  fill-white">
+                        <use href="./statics/icon/arrow.svg#arrow"></use>
+                    </svg>
+                </button>
+                <div class="w-full flex items-center  overflow-hidden">
+                    <img src="./statics/media/layout/profile.jpg" class="w-[50px] h-[50px] rounded-full" alt="avatar" />
+                    <div id="userInfo" class="flex flex-col mr-3">
+                        <span>WebEhsan</span>
+                        <span class="text-sm text-gray-500">احسان آقاحسینی</span>
+                    </div>
+                </div>
+                <div class="w-full flex flex-col mt-10">
+                    <div
+                        class="w-full mb-2 flex items-center text-gray-500 text-sm hover:text-white h-[50px] pl-2 pr-2 hover:pr-3 cursor-pointer rounded-md bg-transparent hover:bg-red-500 transition-all group">
+                        <svg class="w-[25px] h-[25px] fill-gray-400 group-hover:fill-white">
+                            <use href="./statics/icon/dashboard.svg#dashboard"></use>
+                        </svg>
+                        <span class="sidebar-text-item  mr-2">داشبورد</span>
+                    </div>
+                    <div
+                        class="w-full mb-2 flex items-center text-gray-500 text-sm hover:text-white h-[50px] pl-2 pr-2 hover:pr-3 cursor-pointer rounded-md bg-transparent hover:bg-red-500 transition-all group">
+                        <svg class="w-[25px] h-[25px] fill-gray-400 group-hover:fill-white">
+                            <use href="./statics/icon/statistics.svg#statistics"></use>
+                        </svg>
+                        <span class="sidebar-text-item  mr-2">آمار و ارقام</span>
+                    </div>
+                    <div
+                        class="w-full mb-2 flex items-center text-gray-500 text-sm hover:text-white h-[50px] pl-2 pr-2 hover:pr-3 cursor-pointer rounded-md bg-transparent hover:bg-red-500 transition-all group">
+                        <svg class="w-[25px] h-[25px] stroke-gray-400 group-hover:stroke-white">
+                            <use href="./statics/icon/list.svg#list"></use>
+                        </svg>
+                        <span class="sidebar-text-item  mr-2">لیست ها</span>
+                    </div>
+                    <div
+                        class="w-full mb-2 flex items-center text-gray-500 text-sm hover:text-white h-[50px] pl-2 pr-2 hover:pr-3 cursor-pointer rounded-md bg-transparent hover:bg-red-500 transition-all group">
+                        <svg class="w-[25px] h-[25px] stroke-gray-400  group-hover:stroke-white">
+                            <use href="./statics/icon/notification.svg#notification"></use>
+                        </svg>
+                        <span class="sidebar-text-item  mr-2">اعلان ها</span>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full flex flex-col">
+                <div
+                    class="w-full mb-2 flex items-center text-gray-500 text-sm hover:text-white h-[50px] pl-2 pr-2 hover:pr-3 cursor-pointer rounded-md bg-transparent hover:bg-red-500 transition-all group">
+                    <svg class="w-[28px] h-[28px] fill-gray-400  group-hover:fill-white">
+                        <use href="./statics/icon/logout.svg#logout"></use>
+                    </svg>
+                    <span class="sidebar-text-item  mr-2"> خروج</span>
+                </div>
+                <div id="social" class="w-full flex items-center justify-center mt-4">
+                    <button
+                        class="w-[30px] h-[30px] flex items-center justify-center rounded  bg-pos-125 border border-gray-500 hover:border-red-500 mx-2 group">
+                        <svg class="w-[17px] h-[17px] fill-gray-500 group-hover:fill-red-500">
+                            <use href="./statics/icon/telegram.svg#telegram"></use>
+                        </svg>
+                    </button>
+                    <button
+                        class="w-[30px] h-[30px] flex items-center justify-center rounded  bg-pos-125 border border-gray-500 hover:border-red-500 mx-2 group">
+                        <svg class="w-[17px] h-[17px] fill-gray-500 group-hover:fill-red-500">
+                            <use href="./statics/icon/x.svg#x"></use>
+                        </svg>
+                    </button>
+                    <button
+                        class="w-[30px] h-[30px] flex items-center justify-center rounded  bg-pos-125 border border-gray-500 hover:border-red-500 mx-2 group">
+                        <svg class="w-[17px] h-[17px] fill-gray-500 group-hover:fill-red-500">
+                            <use href="./statics/icon/linkedin.svg#linkedin"></use>
+                        </svg>
+                    </button>
+                    <button
+                        class="w-[30px] h-[30px] flex items-center justify-center rounded  bg-pos-125 border border-gray-500 hover:border-red-500 mx-2 group">
+                        <svg class="w-[20px] h-[20px] fill-gray-500 group-hover:fill-red-500">
+                            <use href="./statics/icon/whatsapp.svg#whatsapp"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="container"
+            class="lg:w-[calc(100%-250px)] w-full  min-h-screen flex flex-col transition-all duration-500 lg:p-6 p-3">
+            <div class="w-full h-[70px] bg-white rounded-lg shadow flex items-center justify-between px-3">
+                <span class="lg:block hidden">احسان عزیز به پنل کاربری خود خوش آمدید</span>
+                <button class="w-[35px] h-[35px] rounded-md lg:hidden flex items-center justify-center bg-blue-100">
+                    <svg class="w-[28px] h-[28px] fill-gray-600 ">
+                        <use href="./statics/icon/logout.svg#logout"></use>
+                    </svg>
+                </button>
+                <button class="w-[35px] h-[35px] rounded-md flex items-center justify-center bg-blue-100">
+                    <svg class="w-[28px] h-[28px] fill-gray-600 ">
+                        <use href="./statics/icon/logout.svg#logout"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="./js/js.js"></script>
+</body>
+
+</html>
