@@ -12,11 +12,14 @@
 <body class=" bg-gray-100">
 
     <section class="w-full flex items-center justify-end">
+        <div onclick="handelMobileSideBar()" id="cover"
+            class="fixed bg-[#0000005e] transition-all duration-500 inset-y-0 left-0 right-full w-full h-full z-[4] lg:hidden block">
+        </div>
         <div id="sidebar"
             class="w-[250px] top-0 bottom-0 bg-white shadow py-6 px-4 fixed z-[5] right-[-300px]  lg:right-0 transition-all duration-500 flex flex-col justify-between ">
             <div class="">
                 <button id="arrow"
-                    class="absolute rotate-180 w-[23px] h-[23px] rounded-full bg-red-600 left-[-12px] top-[33px] lg:flex hidden items-center justify-center"
+                    class="absolute rotate-180 w-[23px] h-[23px] rounded-full bg-[#0e286b] left-[-12px] top-[33px] lg:flex hidden items-center justify-center"
                     onclick="handelSideBar()">
                     <svg class="w-[13px] h-[13px]  fill-white">
                         <use href="./statics/icon/arrow.svg#arrow"></use>
@@ -32,7 +35,7 @@
                 <div class="w-full flex flex-col mt-10">
                     <div class="w-full flex flex-col mb-2">
                         <div
-                            class="w-full mb-2 flex items-center text-gray-500 text-sm hover:text-white h-[50px] pl-2 pr-2 hover:pr-3 cursor-pointer rounded-md bg-transparent hover:bg-red-500 transition-all group">
+                            class="w-full mb-2 flex items-center text-gray-500 text-sm hover:text-white h-[50px] pl-2 pr-2 hover:pr-3 cursor-pointer rounded-md bg-transparent hover:bg-[#0e286b] transition-all group">
                             <svg class="w-[25px] h-[25px] fill-gray-400 group-hover:fill-white">
                                 <use href="./statics/icon/dashboard.svg#dashboard"></use>
                             </svg>
@@ -41,7 +44,7 @@
                     </div>
                     <div class="w-full flex flex-col mb-2">
                         <div
-                            class="w-full flex items-center text-gray-500 text-sm hover:text-white h-[50px] pl-2 pr-2 hover:pr-3 cursor-pointer rounded-md bg-transparent hover:bg-red-500 transition-all group">
+                            class="w-full flex items-center text-gray-500 text-sm hover:text-white h-[50px] pl-2 pr-2 hover:pr-3 cursor-pointer rounded-md bg-transparent hover:bg-[#0e286b] transition-all group">
                             <svg class="w-[25px] h-[25px] fill-gray-400 group-hover:fill-white">
                                 <use href="./statics/icon/statistics.svg#statistics"></use>
                             </svg>
@@ -50,7 +53,7 @@
                     </div>
                     <div class="w-full flex flex-col mb-2">
                         <div
-                            class="w-full flex items-center text-gray-500 text-sm hover:text-white h-[50px] pl-2 pr-2 hover:pr-3 cursor-pointer rounded-md bg-transparent hover:bg-red-500 transition-all group">
+                            class="w-full flex items-center text-gray-500 text-sm hover:text-white h-[50px] pl-2 pr-2 hover:pr-3 cursor-pointer rounded-md bg-transparent hover:bg-[#0e286b] transition-all group">
                             <svg class="w-[25px] h-[25px] stroke-gray-400 group-hover:stroke-white">
                                 <use href="./statics/icon/list.svg#list"></use>
                             </svg>
@@ -59,7 +62,7 @@
                     </div>
                     <div class="w-full flex flex-col mb-2">
                         <div
-                            class="w-full flex items-center text-gray-500 text-sm hover:text-white h-[50px] pl-2 pr-2 hover:pr-3 cursor-pointer rounded-md bg-transparent hover:bg-red-500 transition-all group">
+                            class="w-full flex items-center text-gray-500 text-sm hover:text-white h-[50px] pl-2 pr-2 hover:pr-3 cursor-pointer rounded-md bg-transparent hover:bg-[#0e286b] transition-all group">
                             <svg class="w-[25px] h-[25px] stroke-gray-400  group-hover:stroke-white">
                                 <use href="./statics/icon/notification.svg#notification"></use>
                             </svg>
@@ -70,37 +73,45 @@
             </div>
             <div class="w-full flex flex-col">
                 <div
-                    class="w-full  flex items-center text-gray-500 text-sm hover:text-white h-[50px] pl-2 pr-2 hover:pr-3 cursor-pointer rounded-md bg-transparent hover:bg-red-500 transition-all group">
+                    class="w-full  flex items-center text-gray-500 text-sm hover:text-white h-[50px] pl-2 pr-2 hover:pr-3 cursor-pointer rounded-md bg-transparent hover:bg-[#0e286b] transition-all group">
                     <svg class="w-[28px] h-[28px] fill-gray-400  group-hover:fill-white">
                         <use href="./statics/icon/logout.svg#logout"></use>
                     </svg>
                     <span class="sidebar-text-item  mr-2"> خروج</span>
                 </div>
                 <div id="social" class="w-full flex items-center justify-center mt-4">
-                    <button
-                        class="w-[30px] h-[30px] flex items-center justify-center rounded  bg-pos-125 border border-gray-500 hover:border-red-500 mx-2 group">
-                        <svg class="w-[17px] h-[17px] fill-gray-500 group-hover:fill-red-500">
-                            <use href="./statics/icon/telegram.svg#telegram"></use>
-                        </svg>
-                    </button>
-                    <button
-                        class="w-[30px] h-[30px] flex items-center justify-center rounded  bg-pos-125 border border-gray-500 hover:border-red-500 mx-2 group">
-                        <svg class="w-[17px] h-[17px] fill-gray-500 group-hover:fill-red-500">
-                            <use href="./statics/icon/x.svg#x"></use>
-                        </svg>
-                    </button>
-                    <button
-                        class="w-[30px] h-[30px] flex items-center justify-center rounded  bg-pos-125 border border-gray-500 hover:border-red-500 mx-2 group">
-                        <svg class="w-[17px] h-[17px] fill-gray-500 group-hover:fill-red-500">
-                            <use href="./statics/icon/linkedin.svg#linkedin"></use>
-                        </svg>
-                    </button>
-                    <button
-                        class="w-[30px] h-[30px] flex items-center justify-center rounded  bg-pos-125 border border-gray-500 hover:border-red-500 mx-2 group">
-                        <svg class="w-[20px] h-[20px] fill-gray-500 group-hover:fill-red-500">
-                            <use href="./statics/icon/whatsapp.svg#whatsapp"></use>
-                        </svg>
-                    </button>
+                    <a href="https://instagram.com/webehsan" target="_blank">
+                        <button
+                            class="w-[30px] h-[30px] flex items-center justify-center rounded  bg-pos-125 border border-gray-500 hover:border-[#0e286b] mx-2 group">
+                            <svg class="w-[17px] h-[17px] fill-gray-500 group-hover:fill-[#0e286b]">
+                                <use href="./statics/icon/telegram.svg#telegram"></use>
+                            </svg>
+                        </button>
+                    </a>
+                    <a href="https://instagram.com/webehsan" target="_blank">
+                        <button
+                            class="w-[30px] h-[30px] flex items-center justify-center rounded  bg-pos-125 border border-gray-500 hover:border-[#0e286b] mx-2 group">
+                            <svg class="w-[17px] h-[17px] fill-gray-500 group-hover:fill-[#0e286b]">
+                                <use href="./statics/icon/x.svg#x"></use>
+                            </svg>
+                        </button>
+                    </a>
+                    <a href="https://instagram.com/webehsan" target="_blank">
+                        <button
+                            class="w-[30px] h-[30px] flex items-center justify-center rounded  bg-pos-125 border border-gray-500 hover:border-[#0e286b] mx-2 group">
+                            <svg class="w-[17px] h-[17px] fill-gray-500 group-hover:fill-[#0e286b]">
+                                <use href="./statics/icon/linkedin.svg#linkedin"></use>
+                            </svg>
+                        </button>
+                    </a>
+                    <a href="https://instagram.com/webehsan" target="_blank">
+                        <button
+                            class="w-[30px] h-[30px] flex items-center justify-center rounded  bg-pos-125 border border-gray-500 hover:border-[#0e286b] mx-2 group">
+                            <svg class="w-[20px] h-[20px] fill-gray-500 group-hover:fill-[#0e286b]">
+                                <use href="./statics/icon/whatsapp.svg#whatsapp"></use>
+                            </svg>
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -111,23 +122,193 @@
             <div class="w-full h-[70px] bg-white rounded-lg shadow flex items-center justify-between px-3">
                 <span class=" text-sm"> کاربر webehsan خوش آمدی</span>
                 <div class="flex items-center">
-                    <button onclick="handelSideBar()"
-                        class="w-[35px] h-[35px] mx-2 rounded-md lg:hidden flex items-center justify-center bg-blue-100">
+                    <button onclick="handelMobileSideBar()"
+                        class="w-[35px] h-[35px] mx-2 rounded-md lg:hidden flex items-center justify-center bg-[#e9ebfa]">
                         <svg class="w-[28px] h-[28px] stroke-gray-600 ">
                             <use href="./statics/icon/menu.svg#menu"></use>
                         </svg>
                     </button>
-                    <button class="w-[35px] h-[35px] rounded-md lg:flex hidden items-center justify-center bg-blue-100">
+                    <button
+                        class="w-[35px] h-[35px] rounded-md lg:flex hidden items-center justify-center bg-[#e9ebfa]">
                         <svg class="w-[28px] h-[28px] fill-gray-600 ">
                             <use href="./statics/icon/logout.svg#logout"></use>
                         </svg>
                     </button>
                 </div>
             </div>
+            <div class="w-full h-[50px] bg-[#e9ebfa] shadow rounded-md  items-center justify-between px-3 mt-4 flex ">
+                <div class="flex items-center">
+                    <button class="px-2 h-[30px] rounded-full bg-white shadow text-sm text-[tomato]">اطلاعیه</button>
+                    <span class="text-sm mr-2">
+                        به روزرسانی سیستم در ساعت 24
+                    </span>
+                </div>
+            </div>
+            <div class="w-full flex flex-wrap mt-8">
+                <div class="lg:w-[25%] md:w-[50%] w-full p-2">
+                    <div
+                        class="w-full border-b-4 border-[#0e286b] lg:mb-0 mb-5 p-4 bg-white shadow rounded-lg flex flex-col items-center ">
+                        <div
+                            class="w-[70px] h-[70px] bg-[#e9ebfa] shadow rounded-xl  -mt-[35px] flex items-center justify-center ">
+                            <svg class="w-[45px] h-[45px] fill-gray-400 group-hover:fill-white">
+                                <use href="./statics/icon/statistics.svg#statistics"></use>
+                            </svg>
+                        </div>
+                        <span class="text-[#0e286b]  text-[27px] font-bold mt-3">23</span>
+                        <span class="text-sm mt-3">تیکت های باز</span>
+                    </div>
+                </div>
+                <div class="lg:w-[25%] md:w-[50%] w-full p-2">
+                    <div
+                        class="w-full border-b-4 border-[#0e286b] lg:mb-0 mb-5 p-4 bg-white shadow rounded-lg flex flex-col items-center ">
+                        <div
+                            class="w-[70px] h-[70px] bg-[#e9ebfa] shadow rounded-xl  -mt-[35px] flex items-center justify-center ">
+                            <svg class="w-[45px] h-[45px] fill-gray-400 group-hover:fill-white">
+                                <use href="./statics/icon/statistics.svg#statistics"></use>
+                            </svg>
+                        </div>
+                        <span class="text-[#0e286b]  text-[27px] font-bold mt-3">23</span>
+                        <span class="text-sm mt-3">تیکت های باز</span>
+                    </div>
+                </div>
+                <div class="lg:w-[25%] md:w-[50%] w-full p-2">
+                    <div
+                        class="w-full border-b-4 border-[#0e286b] lg:mb-0 mb-5 p-4 bg-white shadow rounded-lg flex flex-col items-center ">
+                        <div
+                            class="w-[70px] h-[70px] bg-[#e9ebfa] shadow rounded-xl  -mt-[35px] flex items-center justify-center ">
+                            <svg class="w-[45px] h-[45px] fill-gray-400 group-hover:fill-white">
+                                <use href="./statics/icon/statistics.svg#statistics"></use>
+                            </svg>
+                        </div>
+                        <span class="text-[#0e286b]  text-[27px] font-bold mt-3">23</span>
+                        <span class="text-sm mt-3">تیکت های باز</span>
+                    </div>
+                </div>
+                <div class="lg:w-[25%] md:w-[50%] w-full p-2">
+                    <div
+                        class="w-full border-b-4 border-[#0e286b] lg:mb-0 mb-5 p-4 bg-white shadow rounded-lg flex flex-col items-center ">
+                        <div
+                            class="w-[70px] h-[70px] bg-[#e9ebfa] shadow rounded-xl  -mt-[35px] flex items-center justify-center ">
+                            <svg class="w-[45px] h-[45px] fill-gray-400 group-hover:fill-white">
+                                <use href="./statics/icon/statistics.svg#statistics"></use>
+                            </svg>
+                        </div>
+                        <span class="text-[#0e286b]  text-[27px] font-bold mt-3">23</span>
+                        <span class="text-sm mt-3">تیکت های باز</span>
+                    </div>
+                </div>
+            </div>
             <div class="w-full flex flex-wrap mt-5">
-                <div class="lg:w-[33.33%] w-[50%] p-2">
-                    <div class="w-full flex flex-col">
+                <div class="lg:w-[20%] md:w-[50%] w-full p-2">
+                    <div
+                        class="w-full border-l-4 border-[#0e286b] p-2 bg-white shadow rounded-lg flex  items-center  text-sm ">
+                        <div class="w-[40px] h-[40px] bg-[#e9ebfa] rounded-lg flex items-center justify-center">
+                            <span class="text-[#0e286b]  text-[20px] font-bold">23</span>
+                        </div>
+                        <span class="mr-2">تیکت های باز</span>
+                    </div>
+                </div>
+                <div class="lg:w-[20%] md:w-[50%] w-full p-2">
+                    <div
+                        class="w-full border-l-4 border-[#0e286b] p-2 bg-white shadow rounded-lg flex  items-center  text-sm ">
+                        <div class="w-[40px] h-[40px] bg-[#e9ebfa] rounded-lg flex items-center justify-center">
+                            <span class="text-[#0e286b]  text-[20px] font-bold">24</span>
+                        </div>
+                        <span class="mr-2">تیکت های باز</span>
+                    </div>
+                </div>
+                <div class="lg:w-[20%] md:w-[50%] w-full p-2">
+                    <div
+                        class="w-full border-l-4 border-[#0e286b] p-2 bg-white shadow rounded-lg flex  items-center  text-sm ">
+                        <div class="w-[40px] h-[40px] bg-[#e9ebfa] rounded-lg flex items-center justify-center">
+                            <span class="text-[#0e286b]  text-[20px] font-bold">25</span>
+                        </div>
+                        <span class="mr-2">تیکت های باز</span>
+                    </div>
+                </div>
+                <div class="lg:w-[20%] md:w-[50%] w-full p-2">
+                    <div
+                        class="w-full border-l-4 border-[#0e286b] p-2 bg-white shadow rounded-lg flex  items-center  text-sm ">
+                        <div class="w-[40px] h-[40px] bg-[#e9ebfa] rounded-lg flex items-center justify-center">
+                            <span class="text-[#0e286b]  text-[20px] font-bold">26</span>
+                        </div>
+                        <span class="mr-2">تیکت های باز</span>
+                    </div>
+                </div>
+                <div class="lg:w-[20%] md:w-[50%] w-full p-2">
+                    <div
+                        class="w-full border-l-4 border-[#0e286b] p-2 bg-white shadow rounded-lg flex  items-center  text-sm ">
+                        <div class="w-[40px] h-[40px] bg-[#e9ebfa] rounded-lg flex items-center justify-center">
+                            <span class="text-[#0e286b]  text-[20px] font-bold">27</span>
+                        </div>
+                        <span class="mr-2">تیکت های باز</span>
+                    </div>
+                </div>
+            </div>
 
+            <div class="w-full flex flex-wrap mt-3">
+                <div class="lg:w-[50%] w-full flex flex-col lg:pl-2 pl-0">
+                    <div class="w-full flex flex-col mt-3">
+                        <div
+                            class="w-full h-[50px] px-4 mb-2 text-sm bg-[#e9ebfa] text-sepa-100 shadow rounded-lg flex items-center justify-between">
+                            <span>آخرین فعالیت</span>
+                        </div>
+                        <div
+                            class="w-full h-[45px] px-4 mb-2 text-sm bg-white shadow rounded-lg flex items-center justify-between">
+                            <span>تایید حد اعتباری</span>
+                            <div class="flex flex-col text-center">
+                                <span>12:30</span>
+                                <span class="text-xs text-gray-500">10/10/1403</span>
+                            </div>
+                        </div>
+                        <div
+                            class="w-full h-[45px] px-4 mb-2 text-sm bg-white shadow rounded-lg flex items-center justify-between">
+                            <span>تایید حد اعتباری</span>
+                            <div class="flex flex-col text-center">
+                                <span>12:30</span>
+                                <span class="text-xs text-gray-500">10/10/1403</span>
+                            </div>
+                        </div>
+                        <div
+                            class="w-full h-[45px] px-4 mb-2 text-sm bg-white shadow rounded-lg flex items-center justify-between">
+                            <span>تایید حد اعتباری</span>
+                            <div class="flex flex-col text-center">
+                                <span>12:30</span>
+                                <span class="text-xs text-gray-500">10/10/1403</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-[50%] w-full flex flex-col lg:pr-2 pr-0">
+                    <div class="w-full flex flex-col mt-3">
+                        <div
+                            class="w-full h-[50px] px-4 mb-2 text-sm bg-[#e9ebfa] text-sepa-100 shadow rounded-lg flex items-center justify-between">
+                            <span>آخرین فعالیت</span>
+                        </div>
+                        <div
+                            class="w-full h-[45px] px-4 mb-2 text-sm bg-white shadow rounded-lg flex items-center justify-between">
+                            <span>تایید حد اعتباری</span>
+                            <div class="flex flex-col text-center">
+                                <span>12:30</span>
+                                <span class="text-xs text-gray-500">10/10/1403</span>
+                            </div>
+                        </div>
+                        <div
+                            class="w-full h-[45px] px-4 mb-2 text-sm bg-white shadow rounded-lg flex items-center justify-between">
+                            <span>تایید حد اعتباری</span>
+                            <div class="flex flex-col text-center">
+                                <span>12:30</span>
+                                <span class="text-xs text-gray-500">10/10/1403</span>
+                            </div>
+                        </div>
+                        <div
+                            class="w-full h-[45px] px-4 mb-2 text-sm bg-white shadow rounded-lg flex items-center justify-between">
+                            <span>تایید حد اعتباری</span>
+                            <div class="flex flex-col text-center">
+                                <span>12:30</span>
+                                <span class="text-xs text-gray-500">10/10/1403</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

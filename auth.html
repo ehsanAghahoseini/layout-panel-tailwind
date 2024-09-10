@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+    <title>WebEhsan - Layout Admin Panel</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="w-full h-screen flex items-center justify-center bg-gray-100">
+
+    <section class="w-[800px] ">
+        <div class="w-full flex items-center">
+            <div class='w-full  md:h-[600px] h-full   bg-white flex flex-wrap overflow-hidden rounded-md'>
+                <div class='w-full md:w-6/12 h-full relative md:flex hidden overflow-hidden '>
+                    <span class='absolute bg-[#00000062] left-0 right-0 bottom-0 top-0  z-[2]'></span>
+                    <img id='coverLogin' src="./statics/media/layout/1.jpg" class='w-full h-full object-cover object-center absolute
+						transition-all duration-700  z-[1] top-0 opacity-100' alt='auth' />
+                    <img id='coverRegister' src="./statics/media/layout/2.jpg" class='w-full h-full object-cover object-center absolute
+						transition-all duration-700 z-[-1] top-[-20px] opacity-0' alt='auth' />
+                </div>
+                <div class='w-full md:w-6/12 h-full p-[20px]'>
+                    <div class='w-full flex flex-col m-auto max-w-[400px] '>
+                        <div class='w-full flex flex-col items-center justify-center '>
+                            <span class='my-2'>به وب احسان خوش آمدید</span>
+                            <div
+                                class="w-[200px] h-10 flex items-center justify-between rounded-full border shadow mt-4 p-1">
+                                <button id='btnLogin' onclick="handelForm('login')" type="button" class='w-full h-full
+									bg-pos-100 rounded-full flex items-center justify-center transition-all text-xs
+									bg-[#0e286b] text-white '>ورود</button>
+                                <button id='btnRegister' onclick="handelForm('register')" type="button"
+                                    class='w-full h-full bg-pos-100 rounded-full flex items-center justify-center transition-all text-xs text-black '>ثبت نام</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full  flex flex-col relative overflow-hidden">
+
+                        <form id="loginForm" class='w-full flex flex-col pt-[30px] '>
+                            <div class="w-full flex flex-col">
+                                <span class="text-xs mb-2 text-gray-500 ml-2
+									">آدرس ایمیل </span>
+                                <input name="email" type="text" placeholder="ایمیل خود را وارد کنید "
+                                    class="w-full h-10 rounded-full border border-gray-300 px-[10px] focus:outline-none text-sm"
+                                    required />
+                            </div>
+                            <div class="w-full flex flex-col mt-5">
+                                <span class="text-xs mb-2 text-gray-500 ml-2 ">رمز عبور</span>
+                                <input name='password' type="password" placeholder="رمز عبور وارد کنید  "
+                                    class="w-full h-10 rounded-full border border-gray-300 px-[10px] focus:outline-none text-sm"
+                                    required />
+                            </div>
+                            <button type="submit"
+                                class="w-full h-10 bg-[#0e286b] text-white text-sm rounded-full mt-10">ورود</button>
+                            <div class="w-full flex flex-col mt-10">
+                                <div class="w-full relative border-t flex justify-center ">
+                                    <span class="bg-white -mt-[14px] flex w-10 justify-center">یا</span>
+                                </div>
+                                <div class="w-full flex items-center justify-between mt-4 text-xs px-2">
+                                    <span class="cursor-pointer">آیا حساب کاربری دارید ؟</span>
+                                    <span class="text-[#0e286b] cursor-pointer">رمز عبور خود را فراموش کردید؟</span>
+                                </div>
+                            </div>
+                        </form>
+
+                        <form id="registerForm" class="w-full  flex-col pt-[20px] hidden">
+                            <div class="w-full flex flex-col">
+                                <span class="text-xs mb-2 text-gray-500 ml-2 ">نام</span>
+                                <input name='name' type="text" placeholder="نام خود را وارد کنید   "
+                                    class="w-full h-[40px] rounded-full border border-gray-300 px-[10px] focus:outline-none text-sm"
+                                    required />
+                            </div>
+                            <div class="w-full flex flex-col mt-5">
+                                <span class="text-xs mb-2 text-gray-500 ml-2 ">نام خانوادگی</span>
+                                <input name='last_name' type="text" placeholder="نام خانوادگی وارد کنید   "
+                                    class="w-full h-[40px] rounded-full border border-gray-300 px-[10px] focus:outline-none text-sm"
+                                    required />
+                            </div>
+                            <div class="w-full flex flex-col mt-5">
+                                <span class="text-xs mb-2 text-gray-500 ml-2 "> آدرس ایمیل</span>
+                                <input name='email' type="text" placeholder="ایمیل وارد کنید   "
+                                    class="w-full h-[40px] rounded-full border border-gray-300 px-[10px] focus:outline-none text-sm"
+                                    required />
+                            </div>
+                            <div class="w-full flex flex-col mt-5">
+                                <span class="text-xs mb-2 text-gray-500 ml-2 ">رمز عبور</span>
+                                <input name='password' type="password" placeholder="رمز عبور وارد کنید "
+                                    class="w-full h-[40px] rounded-full border border-gray-300 px-[10px] focus:outline-none text-sm"
+                                    required />
+                            </div>
+                            <button type="submit"
+                                class="w-full h-[40px] bg-[#0e286b] text-white text-sm rounded-full mt-10">ثبت نام</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./js/js.js"></script>
+</body>
+
+
+</html>
